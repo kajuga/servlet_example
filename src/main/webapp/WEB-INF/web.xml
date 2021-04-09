@@ -25,4 +25,86 @@
     <servlet-name>info</servlet-name>
     <url-pattern>/info</url-pattern>
   </servlet-mapping>
+
+  <!--Json handler-->
+  <servlet-mapping>
+    <servlet-name>JsonHandlerServlet</servlet-name>
+    <url-pattern>/json_data</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>JsonHandlerServlet</servlet-name>
+    <servlet-class>com.fedorov.servlet_json.JsonHandlerServlet</servlet-class>
+  </servlet>
+
+  <!--Json handler-->
+  <servlet-mapping>
+    <servlet-name>JsonFormServlet</servlet-name>
+    <url-pattern>/json</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>JsonFormServlet</servlet-name>
+    <servlet-class>com.fedorov.servlet_json.JsonFormServlet</servlet-class>
+  </servlet>
+
+
+  <!--FILTERS adds ALL HERE!!!-->
+  <servlet>
+    <servlet-name>GetStartFilterPageServlet</servlet-name>
+    <servlet-class>com.fedorov.servlet_filter.GetIndexPageServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>GetStartFilterPageServlet</servlet-name>
+    <url-pattern>/filter</url-pattern>
+  </servlet-mapping>
+
+  <!--Encoding filter UTF-8 for all requests-->
+  <filter>
+    <filter-name>EncodingRequestFilter</filter-name>
+    <filter-class>com.fedorov.servlet_filter.EncodingRequestFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>EncodingRequestFilter</filter-name>
+    <url-pattern>/filter</url-pattern>
+  </filter-mapping>
+
+  <!--Encoding filter UTF-8 for all requests-->
+  <filter>
+    <filter-name>EncodingResponseFilter</filter-name>
+    <filter-class>com.fedorov.servlet_filter.EncodingResponseFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>EncodingResponseFilter</filter-name>
+    <url-pattern>/filter</url-pattern>
+  </filter-mapping>
+<!--END SIMPLE FILTERS examples-->
+
+  <!--Base page servlet  SESSION example!!! -->
+  <servlet>
+    <servlet-name>GetStartSessionServlet</servlet-name>
+    <servlet-class>com.fedorov.servlet_session.GetIndexPageServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>GetStartSessionServlet</servlet-name>
+    <url-pattern>/index_session</url-pattern>
+  </servlet-mapping>
+
+  <!--Encoding filter UTF-8 For my SESSION EXAMPLE -->
+  <filter>
+    <filter-name>EncodingRequestSessionFilter</filter-name>
+    <filter-class>com.fedorov.servlet_session.EncodingFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>EncodingRequestSessionFilter</filter-name>
+    <url-pattern>/index_session</url-pattern>
+  </filter-mapping>
+
+
+
 </web-app>

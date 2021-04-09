@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebServlet;
 
-
+//возвращает наглядное содержимое response
 @WebServlet("/RequestServlet")
 public class SimpleRequestServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -37,7 +37,7 @@ public class SimpleRequestServlet extends HttpServlet {
             PrintWriter out = resp.getWriter();
             count = ClickOutput.printClick(out, count);
             // обращение к классу бизнес-логики
-            if(count == 1)
+            if (count == 1)
                 RequestInfo.printToBrowser(out, req);
             // закрытие потока
             out.close();
@@ -58,6 +58,7 @@ class ClickOutput {
 
 class RequestInfo {
     static String br = "<br>";
+
     public static void printToBrowser(PrintWriter out, HttpServletRequest req) {
         out.println("Method: " + req.getMethod());
         out.print(br + "Request URI: " + req.getRequestURI());

@@ -14,7 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @WebServlet("/create")
-public class AddUserServlet extends HttpServlet {
+public class CreateUserServlet extends HttpServlet {
 
     private Map<Integer, User> users;
 

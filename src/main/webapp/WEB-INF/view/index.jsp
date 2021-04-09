@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<h1>Hello from Java Vision!</h1><br />
+<h1>Hello, Fedorov!</h1><br />
 
 <h2>Все пользователи</h2><br />
 
